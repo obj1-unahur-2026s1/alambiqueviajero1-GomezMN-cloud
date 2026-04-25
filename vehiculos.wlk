@@ -1,12 +1,16 @@
 object alambiqueVeloz {
-    var combustibleActual = 10
+    var combustibleActual = 100
     method combustible(){
         return combustibleActual
     }
     method realizarViaje(ciudad) {
-        combustibleActual -= (ciudad.distancia() / 10).max(0)
+        combustibleActual -= (10).max(0)
+        self.combustibleNecesario(ciudad)
     }
-    method esVeloz() {
+    method esVeloz(ciudad) {
         return self.combustible() > 8
+    }
+    method combustibleNecesario(ciudad) {
+        return self.combustible() >= ciudad.limite() 
     }
 }
