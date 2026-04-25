@@ -21,7 +21,7 @@ object paris {
   }
 }
 object argentina {
-  var presidenteActual = "macri"
+  var presidenteActual = "macsri"
   method esPresidente() {
     return presidenteActual
   }
